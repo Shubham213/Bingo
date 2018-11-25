@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <style>
+        #name1{
+            font-size:40px;
+        }
+        head{
+            padding : 0px;
+            margin : 0px;
+            font-family:Tahoma;
+            align-items:center;
+        }
+        img{
+            padding:10px;
+        }
+        a{
+            font-size:20px;
+        }
+        div{
+            content:"";
+            align-content: center;
+        }
+    </style>
+    <title>BINGO</title>
+    <script type="text/javascript">
+    var myImages = new Array("usa.gif","canada.gif","jamaica.gif","mexico.gif");
+    var img = new Array("usa","canada","jamaica","mexico");
+    var no=5;
+    function changeImg1(that){
+        var n;
+        
+        n=Math.round(Math.random() * 3);
+        img0.src=myImages[n];
+        
+        n=Math.round(Math.random() * (2 + 0.55));
+        img1.src=myImages[n];
+        
+        n=Math.round(Math.random() * 3);
+        if(n==-1)
+        while(n != -1){
+            n=Math.round((Math.random() * 4 )-1);
+        }
+        img2.src=myImages[n];
+        no--;
+        document.getElementById('name').innerHTML='\"'+no+'\"';
+        if(img0.src==img1.src && img0.src==img2.src){
+            document.write("<head><style>img{ padding:10px;}</style></head><body  align='middle'><div align=\"center\"><h2 align ='middle'><br/><br/>YOU WON !!!</h2><img name='img6'  width='144' height='84' src='Img6.jpg' /><img name='img7' height='84' src='Img2.png' /><img name='img8' width='144'  height='84' src=\"Img6.jpg\" /><br/><img height='200' src='Img5.jpg' onclick=\"z()\"/><p id ='nam'>Click on \" Winner \" to Know your \" FLAG \"</P>  \"   <a href='index.html' src='Img1.jpg' name='img3' border='0' >Click</a>   \"<p> Click above 'LINK' to Go Back to 'GAME'</p></div><script type='text/javaScript'> var j=true; var myImages = new Array(\"usa.gif\",\"canada.gif\",\"jamaica.gif\",\"mexico.gif\");var img = new Array(\"usa\",\"canada\",\"jamaica\",\"mexico\"); var noq = Math.round(Math.random() * 3); function z(){ if(j){img6.src=img7.src=img8.src=myImages[noq]; document.getElementById('nam').innerHTML=(\"Bingo On \"+img[noq]); j=false;}}<\/script></body>");
+            no=5;      
+            document.getElementById('name').innerHTML='\"'+no+'\"';           
+        }
+        if(no<=0){
+            document.write("<style>a{font-size:20px;}</style><body align=\"middle\"><div align='center'><br><br><img height ='170' src='Img4.png' onmouseover=\"return k(this)\" onclick=\"return k(this)\" /><p>Get your Mouse Pointer on Loser</p><br><h2 align =\"middle\">YOU LOST !!!</h2><br/><br><br/><br>\"  <a href=\"index.html\" src=\"Img1.jpg\" name=\"img3\" border=\"0\" onclick=\"m()\">Click</a>  \"<p> Click above \"LINK\" to Go Back to \"GAME\" </p></div><script type=\"text/javascript\">function k(that){that.src=\"Img4.jpg\"; return false;\}function l(that){that.src=\"Img4.png\"; return false;\}<\/script>");
+        }
+            return false;
+        }
+        
+        function z(){
+            location.href="https://www.migfoundation.com";
+        }
+        function x()
+        {
+            if(devicePixelRatio>=1.5){
+                img4.width=parseInt(window.innerWidth/3);
+                img0.width=img2.width=img1.width=parseInt(window.innerWidth/5);
+            }
+        }
+    </script>
+    <style type="text/css">
+        #never{
+            position: relative;
+            top:40px;
+            }
+        #never:hover{
+            position: relative;
+            top:40px;
+            animation:wow 2s 0.2s linear normal;
+        }
+        @keyframes wow{
+            0%,100%{
+                transform:scale(1,1);
+            }
+            60%{
+                transform:scale(1.3,1.3);
+            }
+        }
+    </style>
+</head>
+<body onload="x()"align ="center">
+    <div align="center">
+    <img name="img4" align="middle" src="Img1.png" width="350" border="0" onclick="z()"  id="never"/>
+    <br><br><br><br>
+    <img name="img0" src="usa.gif" border="0" onclick="" />
+    <img name="img1" src="mexico.gif" border="0" onclick="" />
+    <img name="img2" src="jamaica.gif" border="0" onclick="" />
+    <br/>
+    <br><br>
+    "   <a href="#" src="Img1.jpg" name="img3" border="0" onclick="return changeImg1(this)">Click Here</a>   "
+    <br><br>
+    <h3><p id="name">"5"</p></h3>
+    <p>Chances Left ...</p>
+</div>
+</body>
+</html>
